@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Free CRM App Test Automation suit]" guice-stage="DEVELOPMENT" verbose="5">
+  <listeners>
+    <listener class-name="com.crm.qe.ExtentReportListener.ExtentReportListenerForCRM"/>
+  </listeners>
+  <test thread-count="5" name="Free CRMPRO App Test Cases(failed)" verbose="5">
+    <parameter name="environment" value="QE"/>
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="emailId" value="rohitranjan@yahoo.com"/>
+    <parameter name="URL" value="https://login.yahoo.com/"/>
+    <classes>
+      <class name="com.crm.qe.testcases.ContactsPageTest">
+        <methods>
+          <include name="selectSingleContactsTest"/>
+          <include name="tearDown"/>
+          <include name="validateCreateNewContact"/>
+          <include name="setUp"/>
+          <include name="selectMultipleContactsTest"/>
+        </methods>
+      </class> <!-- com.crm.qe.testcases.ContactsPageTest -->
+      <class name="com.crm.qe.testcases.LoginPageTest">
+        <methods>
+          <include name="loginPageTitleTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.crm.qe.testcases.LoginPageTest -->
+      <class name="com.crm.qe.testcases.HomePageTest">
+        <methods>
+          <include name="verifyUserNameTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.crm.qe.testcases.HomePageTest -->
+    </classes>
+  </test> <!-- Free CRMPRO App Test Cases(failed) -->
+</suite> <!-- Failed suite [Free CRM App Test Automation suit] -->

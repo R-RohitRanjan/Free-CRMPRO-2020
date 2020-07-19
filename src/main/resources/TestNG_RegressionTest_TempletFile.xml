@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Free CRM App Test Automation suit" verbose="5">
+
+	<listeners>
+		<listener class-name="com.crm.qe.ExtentReportListener.ExtentReportListenerForCRM" />
+	</listeners>
+	
+	<test name="Free CRMPRO App Test Cases">
+	
+		<parameter name="environment" value="QE"/>
+		<parameter name="browser" value="Chrome"/>
+		<parameter name="URL" value="https://login.yahoo.com/"/>
+		<parameter name="emailId" value="rohitranjan@yahoo.com"/>
+		
+		<classes>
+			<class name="com.crm.qe.testcases.LoginPageTest"/>
+			<class name="com.crm.qe.testcases.HomePageTest"/>
+			<class name="com.crm.qe.testcases.ContactsPageTest"/>
+		</classes>
+		
+	</test>
+
+</suite>
